@@ -351,6 +351,9 @@ span#paitentName {
         <hr>";
     }
     ?>
+    <?php
+    include "partials/footer.php";
+    ?>
 
 
     <!-- Optional JavaScript -->

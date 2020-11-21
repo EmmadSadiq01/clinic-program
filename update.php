@@ -40,7 +40,7 @@ if (isset($_GET['update'])) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Iqbal Homeo Clinic</title>
     <!-- <link rel="stylesheet" href="print.css" media="print"> -->
     <link rel="stylesheet" href="screen.css" media="screen">
@@ -282,7 +282,7 @@ if (isset($_GET['update'])) {
                 </div>
 
             </div>
-            <p  onclick="show()" class="btn btn-success" id="show" >Show</p>
+            <p  onclick="show()" class="btn btn-success" id="show" >Extra Details</p>
             <!-- <a  >hide</a> -->
             <div class="form-row">
                 <div class="hide form-group col-md-6">
@@ -297,6 +297,10 @@ if (isset($_GET['update'])) {
             <button type="submit" class="hide btn btn-primary">Save</button>
         </form>
     </div>
+
+    <?php
+    include "partials/footer.php";
+    ?>
 
 
     <!-- Optional JavaScript -->
@@ -315,7 +319,7 @@ if (isset($_GET['update'])) {
             if(x===1){
             let butn = document.getElementById("additoional")
             let show = document.getElementById("show")
-            show.innerHTML="show"
+            show.innerHTML="Extra Details"
 
             butn.style.display = "none"
 

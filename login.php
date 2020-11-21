@@ -135,6 +135,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <!-- End Form -->
         </form>
     </div>
+    <?php
+    include "partials/footer.php";
+    ?>
 
 
     <!-- Optional JavaScript -->

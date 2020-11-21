@@ -202,6 +202,9 @@ if (isset($_GET['delete'])) {
         <!-- <audio autoplay><source src='noti.mp3' type='audio/mpeg'></audio> -->
 
     </div>
+    <?php
+    include "../partials/footer.php";
+    ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

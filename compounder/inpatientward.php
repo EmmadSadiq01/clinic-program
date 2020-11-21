@@ -185,6 +185,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit" class="btn btn-primary">Add Paitent</button>
         </form>
     </div>
+    <?php
+    include "../partials/footer.php";
+    ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

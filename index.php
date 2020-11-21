@@ -40,7 +40,9 @@ require 'partials/_nav.php'
     </div>
 
 
-
+    <?php
+    include "partials/footer.php";
+    ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

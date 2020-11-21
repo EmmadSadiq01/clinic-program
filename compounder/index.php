@@ -38,6 +38,9 @@ require '_nav.php'
         </div>
     </div>
 
+    <?php
+    include "../partials/footer.php";
+    ?>
 
 
 

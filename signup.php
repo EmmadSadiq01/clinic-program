@@ -101,6 +101,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+    <?php
+    include "partials/footer.php";
+    ?>
 
 
     <!-- Optional JavaScript -->
