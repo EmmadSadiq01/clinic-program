@@ -191,7 +191,7 @@ if (isset($_GET['update'])) {
                     <input type="radio" class="form-check-input" name="diabetics" value="Yes">Diabetics
                 </label>
             </div>
-            <div class="form-row">
+            <div class="form-row" id="additoional">
                 <div class="hide form-group col-md-3 col-6">
                     <div class="input-group flex-nowrap">
                         <div class="input-group-prepend">
@@ -280,7 +280,10 @@ if (isset($_GET['update'])) {
                         <input type="text" class="form-control" name="height">
                     </div>
                 </div>
+
             </div>
+            <p  onclick="show()" class="btn btn-success" id="show" >Show</p>
+            <!-- <a  >hide</a> -->
             <div class="form-row">
                 <div class="hide form-group col-md-6">
                     <label for="diagnostics">Paitent`s Symptoms</label>
@@ -305,6 +308,28 @@ if (isset($_GET['update'])) {
         let meds = document.getElementById("meds").value
         console.log(meds);
         sessionStorage.setItem("medciens", meds);
+        x=0;
+
+        // let btn = document.getElementsByName("show")
+        function show(){
+            if(x===1){
+            let butn = document.getElementById("additoional")
+            let show = document.getElementById("show")
+            show.innerHTML="show"
+
+            butn.style.display = "none"
+
+            x=0
+            }
+            else{
+                let butn = document.getElementById("additoional")
+                let show = document.getElementById("show")
+            butn.style.display = "flex"
+            show.innerHTML="Hide"
+            x=1
+            }
+
+        }
     </script>
 
 </body>
