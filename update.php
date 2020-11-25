@@ -40,7 +40,7 @@ if (isset($_GET['update'])) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Iqbal Homeo Clinic</title>
     <!-- <link rel="stylesheet" href="print.css" media="print"> -->
     <link rel="stylesheet" href="screen.css" media="screen">
@@ -157,13 +157,13 @@ if (isset($_GET['update'])) {
     <div class="container mt-4">
 
 
-    <div class="last_record">
-        <?php
-        $sno = $_SESSION['paitent_id'];
-        $sql = "SELECT * FROM paitents_opd where `paitent_id`= '$sno' ORDER BY `datetime` DESC";
-        $result = mysqli_query($connection, $sql);
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo ' 
+        <div class="last_record">
+            <?php
+            $sno = $_SESSION['paitent_id'];
+            $sql = "SELECT * FROM paitents_opd where `paitent_id`= '$sno' ORDER BY `datetime` DESC";
+            $result = mysqli_query($connection, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo ' 
                 <h3>Last Visit Details</h3><p id="date"> Last Visit Date: <span>' . $row['datetime'] . '</span></p> <div class="visit_box">
                
                 <div class="box">
@@ -172,19 +172,19 @@ if (isset($_GET['update'])) {
                 </div>
                 <div class="box">
                 <h4>Old Medicines:</h4>
-                <p>' . nl2br($row['meds'] ). '</p>
+                <p>' . nl2br($row['meds']) . '</p>
                 </div>
             </div>';
-        }
+            }
 
-        ?>
+            ?>
         </div>
 
 
 
         <h3 id="updates">New Updates</h3>
 
-        <form action="/CMS/records.php" method="post">
+        <form action="/CMS/records.php" method="post" class="mb-5">
 
             <div class="hide ml-3 form-group">
                 <label class="form-check-label">
@@ -282,7 +282,7 @@ if (isset($_GET['update'])) {
                 </div>
 
             </div>
-            <p  onclick="show()" class="btn btn-success" id="show" >Extra Details</p>
+            <p onclick="show()" class="btn btn-success" id="show">Extra Details</p>
             <!-- <a  >hide</a> -->
             <div class="form-row">
                 <div class="hide form-group col-md-6">
@@ -312,25 +312,24 @@ if (isset($_GET['update'])) {
         let meds = document.getElementById("meds").value
         console.log(meds);
         sessionStorage.setItem("medciens", meds);
-        x=0;
+        x = 0;
 
         // let btn = document.getElementsByName("show")
-        function show(){
-            if(x===1){
-            let butn = document.getElementById("additoional")
-            let show = document.getElementById("show")
-            show.innerHTML="Extra Details"
-
-            butn.style.display = "none"
-
-            x=0
-            }
-            else{
+        function show() {
+            if (x === 1) {
                 let butn = document.getElementById("additoional")
                 let show = document.getElementById("show")
-            butn.style.display = "flex"
-            show.innerHTML="Hide"
-            x=1
+                show.innerHTML = "Extra Details"
+
+                butn.style.display = "none"
+
+                x = 0
+            } else {
+                let butn = document.getElementById("additoional")
+                let show = document.getElementById("show")
+                butn.style.display = "flex"
+                show.innerHTML = "Hide"
+                x = 1
             }
 
         }
