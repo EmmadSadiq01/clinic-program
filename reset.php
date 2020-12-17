@@ -24,15 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 } else {
                     $showError = " Password not same";
                 }
-
-                // $_SESSION['username'] = $user_name;
-                // if ($row['role'] == "Compounder") {
-                //     $_SESSION['compounder_logedin'] = true;
-                //     header('location: /CMS/compounder');
-                // } else {
-                //     $_SESSION['logedin'] = true;
-                //     header('location: /CMS');
-                // }
             } else {
                 $showError = " Invalid Credentials";
             }
